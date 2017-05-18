@@ -1,0 +1,10 @@
+{
+  "defaultCommand": "makeGithubRepo",
+  "commands": {
+    "makeGithubRepo": {
+      "scriptType": "bash",
+      "scriptPath": "makeGithubRepo.sh",
+      "vars": {}
+    }
+  }
+}
