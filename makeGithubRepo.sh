@@ -6,7 +6,6 @@ read repoName
 theName='{"name":"'
 theName+=${repoName}
 theName+='"}'
-theCurl="-u ${githubUsername} https://api.github.com/user/repos -d"
-theCurl+=theName
-curl -u ${githubUsername} https://api.github.com/user/repos -d '{"name":"${repoName}"}'
-
+theCurl="-u ${githubUsername} https://api.github.com/user/repos -d "
+theCurl+=$theName
+curl $theCurl
