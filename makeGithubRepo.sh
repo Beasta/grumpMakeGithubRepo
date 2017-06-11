@@ -3,11 +3,7 @@ echo "what is your github username?"
 read githubUsername
 echo "what should your repo be named?"
 read repoName
-theName='{"name":"'
-theName+=${repoName}
-theName+='"}'
-theCurl="-u ${githubUsername} https://api.github.com/user/repos -d "
-theCurl+=$theName
+theCurl="-u ${githubUsername} https://api.github.com/user/repos -d {\"name\":\"${repoName}\"}"
 curl $theCurl
 echo "add remote and push now (y/n)?"
 read push
